@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Pharmacist | Chemist Care</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /><!--this is where the Animation on Scroll is linked from the internet-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script> <!--this is where the styles for the AOS is linked-->
+     <link rel="shortcut icon" type = image/png href="images/sclogo.png"> <!--adds logo to webpage tab-->
+    <script type= "text/javascript" src="js/script.js"></script><!this is where the external javascript file is linked>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><!this sources the jquery from the internet>
+
+
+</head>
+
+<body>
+    <div id="nbar"> <! this is the header div called nbar>
+<a href="index.html" data-aos="fade-right" data-aos-duration="3500" data-aos-once="true"><img src="images/logo.png"></a>
+    </div>
+     <nav data-aos="fade-right" data-aos-duration="3500" data-aos-once="true">
+        <ul>
+        <a href="about.html">About</a>
+        <a href="catalogue.html">Catalogue</a>
+        <a href="vaccine.html">Vaccine</a>
+        <a href="pharmacist.html">Pharmacist</a>
+        <a href="contact.html">Contact</a>
+        </ul>
+        </nav>
+     <h1 data-aos="zoom-in" data-aos-duration="3500" data-aos-once="true"
+         style="font-family: 'Montserrat', sans-serif; margin-top: 50px; font-size: 30px; margin-left: 175px;">
+        if you would like to check availability for a pharmacist, please scroll below:</h1>
+      <div id="T4" data-aos="fade-right" data-aos-duration="3500" data-aos-once="true"><h2>Mr John Sams</h2></div>
+     <table data-aos="fade-left" data-aos-duration="3500" data-aos-once="true">
+    <tr>
+      <tr>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+    <th>Saturday</th>
+    <th>Sunday</th>
+  </tr>
+
+  <tr>
+    <td>8AM-10AM <br><br>4PM-6PM</td>
+    <td>10AM-11AM <br><br>4PM-5PM</td>
+    <td>7AM-11AM <br><br>2PM-3PM</td>
+    <td>8AM-10AM <br><br>2PM-6PM</td>
+    <td>9AM-10AM <br><br>1PM-4PM</td>
+    <td>10AM-11AM <br><br>5PM-6PM</td>
+    <td>9AM-10AM <br><br>12PM-6PM</td>
+  </tr>
+     </table>
+           <div id="T4" data-aos="fade-right" data-aos-duration="3500" data-aos-once="true" style="margin-top: 200px"><h2>Dr Simon Wright</h2></div>
+
+  <table style="margin-top: 200px; position: absolute; margin-bottom: 200px;" data-aos="fade-left" data-aos-duration="3500" data-aos-once="true">
+    <tr>
+      <tr>
+    <th>Monday</th>
+    <th>Tuesday</th>
+    <th>Wednesday</th>
+    <th>Thursday</th>
+    <th>Friday</th>
+    <th>Saturday</th>
+    <th>Sunday</th>
+  </tr>
+
+  <tr>
+    <td>11AM-10AM <br><br>2PM-6PM</td>
+    <td>11AM-12PM <br><br>1PM-5PM</td>
+    <td>9AM-11AM <br><br>1PM-3PM</td>
+    <td>8AM-10AM <br><br>2PM-6PM</td>
+    <td>9AM-10AM <br><br>3PM-4PM</td>
+    <td>8AM-11AM <br><br>2PM-6PM</td>
+    <td>9AM-11AM <br><br>2PM-6PM</td>
+  </tr>
+     </table>
+  <div id="input1" data-aos="fade-right" data-aos-duration="3500" data-aos-once="true">
+<input id="myInput" type="text" placeholder="Please enter a time (in the form XXAM-XXAM)" style="margin-left: 20px; margin-top: 50px; width: 275px;">
+
+<button onclick="myFunction()" style="background-color: white; color: #101535;
+margin-right: 900px; margin-top: 10px; font-family: 'Montserrat', sans-serif;">Check</button>
+
+<p id="output" style="color: #101535; height: 40px; width: 500px; background-color: white; margin-left: 350px;
+margin-top: -40px; font-family: 'Montserrat', sans-serif;"></p>
+
+<button onclick="sdown()" style="background-color: white; color: #101535;
+margin-right: -1000px; margin-top: -55px; font-family: 'Montserrat', sans-serif;">Book Now</button>
+
+  </div>
+  
+  <div id="input2" data-aos="fade-right" data-aos-duration="3500" data-aos-once="true">
+<input id="myInput1" type="text" placeholder="Please enter a time (in the form XXAM-XXAM)" style="margin-left: 20px; margin-top: 50px; width: 275px;">
+
+<button onclick="myFunction1()" style="background-color: white; color: #101535;
+margin-right: 900px; margin-top: 10px; font-family: 'Montserrat', sans-serif;">Check</button>
+
+<p id="output1" style="color: #101535; height: 40px; width: 500px; background-color: white; margin-left: 350px;
+margin-top: -40px; font-family: 'Montserrat', sans-serif;"></p>
+
+<button onclick="sdown()" style="background-color: white; color: #101535;
+margin-right: -1000px; margin-top: -55px; font-family: 'Montserrat', sans-serif;">Book Now</button>
+
+  </div>
+
+
+
+
+
+ <div id="pForm" data-aos="fade-up" data-aos-duration="3500" data-aos-once="true">
+    <h3 style="margin-left: 50px;">Book your time to see a pharmacist</h3><br>
+    <form id="Forms" name="Forms">
+        <h3 style="margin-left: 25px;">Name:</h3>
+    <input class="pharmacist-contact" type="text" style="width: 300px;" placeholder="Name"><br>
+    <h3 style="margin-left: 25px;">Pharmacist:</h3>
+
+  <h5 style="margin-left: 45px;">Mr John Sams</h5>  <input type="radio" id="rbutton"  value="Mr John Sams" name="pharmacist" onclick="setTime();" onchange="getOptions(this.value);">
+   <h5 style="margin-left: 300px; margin-top: -98px;">Dr Simon Wright</h5> <input id="rbutton1"  type="radio" value="Dr Simon Wright" name="pharmacist" onclick="setTime();" onchange="getOptions(this.value);" style="">
+  <br>
+      <h3 style="margin-left: 25px;">Time:</h3>
+    <select name="Time" class="pharmacist-contact" style="width: 300px;" onchange="myDisplay(this.value);"></select>      
+    </form>
+    <div id="submitbutton" onclick="totalbooking()">Submit</div>
+     
+<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-eb4af7c1-6507-40e6-8f0a-bda3a1340404"></div>
+
+</div>
+
+  <script>
+      AOS.init({
+        duration: 3000,
+        once: true,
+      });
+      
+      List();
+    </script>
+    
+    
+    <script>
+function myFunction() {
+  var text;
+  var times = document.getElementById("myInput").value;
+
+  switch(times) {
+    case "8AM-10AM":
+      text = "That time is available on Monday and Thursday";
+      break;
+    case "9AM-10AM":
+      text = "That time is available on Friday and Sunday";
+    break;
+    case "7AM-11AM":
+      text = "That time is available on Wednesday";
+      break;
+    case "10AM-11AM":
+        text = "That time is available on Tuesday and Saturday";
+    break;
+    case "4PM-6PM":
+        text = "That time is available on Monday afternoon";
+    break;
+    case "4PM-5PM":
+        text = "That time is available on Tuesday afternoon";
+    break;
+    case "2PM-3PM":
+        text = "That time is available on Wednesday afternoon";
+    break;
+    case "2PM-6PM":
+        text = "That time is available on Thursday afternoon";
+    break;
+    case "1PM-4PM":
+        text = "That time is available on Friday afternoon";
+    break;
+    case "5PM-6PM":
+        text = "That time is available on Saturday afternoon";
+    break;
+    case "12PM-6PM":
+        text = "That time is available on Sunday afternoon";
+    break;
+    default:
+        text = "Sorry, that time is not available";
+  }
+  document.getElementById("output").innerHTML = text;
+}
+
+function myFunction1() {
+  var text;
+  var times = document.getElementById("myInput1").value;
+
+  switch(times) {
+    case "11AM-10AM":
+      text = "That time is available on Monday";
+      break;
+    case "11AM-12PM":
+      text = "That time is available on Tuesday";
+    break;
+    case "9AM-11AM":
+      text = "That time is available on Wednesday";
+      break;
+    case "8AM-10AM":
+        text = "That time is available on Thursday";
+    break;
+    case "4PM-6PM":
+        text = "That time is available on Monday afternoon";
+    break;
+    case "4PM-5PM":
+        text = "That time is available on Tuesday afternoon";
+    break;
+    case "2PM-3PM":
+        text = "That time is available on Wednesday afternoon";
+    break;
+    case "2PM-6PM":
+        text = "That time is available on Thursday afternoon";
+    break;
+    case "1PM-4PM":
+        text = "That time is available on Friday afternoon";
+    break;
+    case "5PM-6PM":
+        text = "That time is available on Saturday afternoon";
+    break;
+    case "12PM-6PM":
+        text = "That time is available on Sunday afternoon";
+    break;
+    default:
+        text = "Sorry, that time is not available";
+  }
+  document.getElementById("output1").innerHTML = text;
+}
+</script>
+ <script>
+    function setTime(){       // Checks & outputs an alert to display the Pizza Make to either 'Classic', 'Legend' or 'Signature'
+    if (document.Forms.pharmacist[0].checked == true) {
+        alert("Your Pharmacist will be: " + document.Forms.pharmacist[0].value);
+    }
+    else if (document.Forms.pharmacist[1].checked == true) {
+           alert("Your Pharmacist will be: " + document.Forms.pharmacist[1].value);
+        }	  
+}
+
+function getOptions(pharmacist) {
+    var list;
+    var listValue;
+    if (pharmacist == "Mr John Sams") {
+        list = ["Please Select", "8AM-10AM (Monday)","8AM-10AM (Thursday)","10AM-11AM (Tuesday)","7AM-11AM (Wednesday)","9AM-10AM (Friday)", "10AM-11AM (Saturday)", "9AM-10AM (Sunday)",
+                "4PM-6PM (Monday)", "4PM-5PM (Tuesday)", "2PM-3PM (Wednesday)", "2PM-6PM (Thursday)", "1PM-4PM (Friday)", "5PM-6PM (Saturday)", "12PM-6PM (Sunday)"];  // Creates an array called list populating it with pizza type
+        listValue = [' ',7.95,9.95,8.95];  // Creates an array called listValue populating it with pizza prices
+    }
+    if (pharmacist == "Dr Simon Wright") {
+        list = ["Please Select","10AM-11AM (Monday)","11AM-12PM (Tuesday)","9AM-11AM (Wednesday)","8AM-10AM (Thursday)","9AM-10AM (Friday)","8AM-11AM (Saturday)","9AM-11AM (Sunday)",
+                "2PM-6PM (Monday)", "1PM-5PM (Tuesday)", "1PM-3PM (Wednesday)", "2PM-6PM (Thursday)", "3PM-4PM (Friday)", "2PM-6PM (Saturday)", "2PM-6PM (Sunday)"];
+        listValue = [' ', 10.95, 9.95, 10.95];
+    }
+    
+    for (var i = 0; i < document.Forms.pharmacist.length; i++) {         //Clear the dropdown menu of old dropdown list
+		document.Forms.Time.options[i] = null;
+	}
+	for (var i = 0; i < list.length; i++) {                                     //Re-populates the dropdown menu with new dropdown list
+		document.Forms.Time.options[i] = new Option(list[i],listValue[i],0,0);
+		//alert(list[i]);
+	}
+    
+
+}
+
+function Submitphar(list,pharmacist){
+    alert("Your pharmacist will be:" + pharmacist + "You will see him at:" + list)
+}
+
+function randomnumb() {
+var x = alert("Your booking number is "+Math.floor((Math.random() * 5000) + 1))
+}
+
+function totalbooking(){
+    Submitphar();
+    randomnumb();
+}
+
+
+function sdown(){
+    $('html, body').animate({scrollTop:1400}); //scrolls page at top when loaded
+}
+
+ </script>
+
+</body>
+</html>

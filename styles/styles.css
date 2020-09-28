@@ -1,0 +1,597 @@
+html, body{  /*creates the general size of the body of both pages */
+    margin:0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    background: linear-gradient(to right, #00bdff, #00ffed); /*color linear gradient is a feature of CSS that combines 2 colours */
+    position: absolute;
+}
+
+
+#nbar{  /*this is the styling for the navigation bar*/
+    background-color: #101535;
+    width: 1440px;
+    height: 115px;
+    margin-top: 0px;
+
+}
+
+#nbar img{
+    margin-top: 10px;
+    margin-left: 10px;
+
+}
+
+img{
+    margin-top: 125px;
+    margin-left: 140px;
+}
+
+nav{
+    margin-left: 400px;
+    margin-top: -100px;
+}
+
+h1{
+    font-size: 80px;
+    position: absolute;
+    color: white;
+    margin-top: -450px;
+    margin-left: 450px;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+#T1 h2{
+    font-size: 65px;
+    position: absolute;
+    color: white;
+    margin-top: 50px;
+    margin-left: 550px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+#T2 h2{
+    font-size: 65px;
+    position: absolute;
+    color: white;
+    margin-top: 50px;
+    margin-left: 550px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+#photo img{
+    margin-left: 200px;
+    margin-top: 200px;
+    position: absolute;
+}
+
+#photo1 img{
+    margin-top: 150px;
+}
+
+
+#textone{
+    font-size: 25px;
+    margin-top: 855px;
+    padding: 50px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: justify;
+}
+
+#texttwo{
+    font-size: 25px;
+    margin-top: 20px;
+    padding: 50px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: justify;
+}
+
+#textthree{
+    font-size: 20px;
+    margin-top: -50px;
+    padding: 200px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: justify;
+}
+
+a{
+    font-size: 30px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    margin: 25px;
+    text-decoration: none;
+}
+
+nav ul a {
+  position: relative;
+}
+nav ul a:after,
+nav ul a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: #fdf9ff;
+  height: 1px;
+}
+nav ul a:hover:after {
+  width: 100%;
+}
+
+
+
+nav ul  a,
+nav ul  a:after,
+nav ul  a:before {
+  transition: all .5s;
+}
+
+#T3 h2{
+    font-size: 65px;
+    position: absolute;
+    color: white;
+    margin-top: 50px;
+    margin-left: 550px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#T4 h2{
+    font-size: 50px;
+    position: absolute;
+    color: white;
+    margin-left: 200px;
+    margin-top: 120px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#input1{
+    background-color: #101535;
+    height: 150px;
+    width: 1125px;
+    margin-left: 150px;
+    margin-top: -150px;
+    border-radius: 50px;
+}
+
+#input2{
+    background-color: #101535;
+    height: 150px;
+    width: 1125px;
+    margin-left: 150px;
+    margin-top: 475px;
+    border-radius: 50px;
+}
+
+   
+.quizContainer{
+    height: 525px;
+    width: 850px;
+    margin-left: 300px;
+    border-radius: 50px;
+    margin-top: 150px;
+    color: white;
+    margin-bottom: 20px;
+    background-color: #101535;
+    text-align: center;
+    font-size: 13px;
+    position: absolute;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.result{
+    height: auto;
+    margin: auto;
+    margin-bottom: 15px;
+    font-size: 15px;
+
+}
+
+.nextButton{
+  background-color: white;
+  border: none;
+  font-size: 15px;
+  color: #101535;
+  padding: 20px;
+  border-radius: 20px;
+  width: 200px;
+  text-align: center;
+  margin-top: 0px;
+  position: absolute;
+  margin-left: 300px;
+  text-decoration: none;
+  overflow: hidden;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.choiceList{
+  list-style-type: none;
+  font-size: 25px;
+  margin-right: 200px;
+  
+}
+
+li{
+    margin: 0 0 40px 0;
+}
+
+
+#button2{
+  background: #fff;
+  margin-top: 50px;
+  height: 40px;
+  width: 200px;
+  margin-left: 190px;
+  text-align: center;
+  margin-bottom: 100px;
+  color: #101535;
+  position: absolute;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.contact-form{
+  max-width: 600px;
+  margin: auto;
+  margin-top: -175px;
+  margin-bottom: 20px;
+  padding: 0 10px;
+  overflow: hidden;
+}
+
+.contact-form-text{
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 16px 0;
+  border: 0;
+  background: #fdf9ff;
+  padding: 20px 40px;
+  outline: none;
+  color: #000000;
+  transition: 0.5s;
+}
+.contact-form-text:focus{
+  box-shadow: 0 0 10px 4px #34495e;
+}
+textarea.contact-form-text{
+  resize: none;
+  height: 120px;
+}
+button{
+  float: right;
+  border: 0;
+  background: #101535;
+  color: #fff;
+  padding: 12px 50px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+.contact-form-btn:hover{
+  background: #2980b9;
+}
+
+table, th, td{
+  margin-left: 150px;
+  font-size: 25px;
+  color: #ffffff;
+  background-color: #101535;
+  margin-top: 200px;
+  padding: 20px;
+  font-family: 'Montserrat', sans-serif;
+  border-radius: 50px;
+}
+
+table, td{
+    font-size: 15px;
+}
+
+
+
+table.center {
+  margin-left: auto; 
+  margin-right: auto;
+}
+
+#vForm{
+    height: 800px;
+    width: 500px;
+    background-color: #101535;
+    margin-top: 175px;
+    margin-left: 475px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    
+}
+
+.mySlides{
+    display: none;
+    margin-top: 75px;
+}
+
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  margin-top: -75px;
+  margin-left: 95px;
+}
+
+#Form2{
+    height: 375px;
+    width: 600px;
+    background-color: #101535;
+    margin-top: 200px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+}
+
+#Cvdtest{
+    height: 375px;
+    width: 600px;
+    background-color: #101535;
+    margin-top: -425px;
+    margin-left: 800px;
+    margin-bottom: 50px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+}
+/* Next & previous buttons */
+.prev{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  margin-left: 60px;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next{
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  margin-right: -220px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+
+
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next {font-size: 11px}
+}
+
+.pharmacist-contact{
+  width: 500px;
+  box-sizing: border-box;
+  background: #fdf9ff;
+  padding: 20px 40px;
+  outline: none;
+  margin: 15px;
+  color: #000000;
+  transition: 0.5s;
+}
+
+.pharmacist-contact:focus{
+  box-shadow: 0 0 10px 4px #34495e;
+}
+
+textarea.pharmacist-contact{
+  resize: none;
+  height: 120px;
+}
+
+h5{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+      
+}
+
+#pForm{
+    height: 750px;
+    width: 600px;
+    background-color: #101535;
+    margin-top: 125px;
+    margin-left: 100px;
+    margin-bottom: 50px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+    
+}
+
+input{
+    margin-left: 150px;
+    padding: 10px;
+}
+
+#rbutton{
+    margin-left: 125px;
+    margin-top: -40px;
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+#rbutton1{
+      margin-left: 395px;
+    margin-top: -40px;
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+
+#submitbutton{
+  background: #fff;
+  margin-top: 50px;
+  height: 30px;
+  width: 190px;
+  margin-left: 170px;
+  text-align: center;
+  margin-bottom: 100px;
+  color: #101535;
+  position: absolute;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+select{
+    margin-left: 150px;
+    padding: 10px;
+}
+
+h3{
+    font-size: 25px;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-decoration: none;
+}
+
+#print{
+  background: #fff;
+  margin-top: 50px;
+  height: 30px;
+  width: 120px;
+  margin-left: 170px;
+  text-align: center;
+  margin-bottom: 100px;
+  color: #101535;
+  position: absolute;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#Pdf{
+  background: #fff;
+  margin-top: -250px;
+  height: 30px;
+  width: 200px;
+  margin-left: 615px;
+  position: absolute;
+  text-align: center;
+  margin-bottom: 100px;
+  color: #101535;
+  border-radius: 20px;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+}
+
+#notice{
+    height: 520px;
+    width: 350px;
+    text-align: center;
+    background-color: #101535;
+    margin-top: 175px;
+    position: absolute;
+    margin-left: 50px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+}
+
+#notice1{
+    height: 520px;
+    width: 350px;
+    text-align: center;
+    background-color: #101535;
+    margin-top: 175px;
+    position: absolute;
+    margin-left: 1035px;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 50px;
+}
+
+
+h5{
+    font-size: 20px;
+    text-align: justify;
+    padding: 20px;
+}

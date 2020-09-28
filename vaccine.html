@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Vaccine | Chemist Care</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /><!--this is where the Animation on Scroll is linked from the internet-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script> <!--this is where the styles for the AOS is linked-->
+     <link rel="shortcut icon" type = image/png href="images/sclogo.png"> <!--adds logo to webpage tab-->
+    <script type= "text/javascript" src="js/script.js"></script><!this is where the external javascript file is linked>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><!this sources the jquery from the internet>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.4/jspdf.min.js  "></script>
+
+
+</head>
+
+<body>
+    <div id="nbar"> <! this is the header div called nbar>
+<a href="index.html" data-aos="fade-right" data-aos-duration="3500" data-aos-once="true"><img src="images/logo.png"></a>
+    </div>
+     <nav data-aos="fade-right" data-aos-duration="3500" data-aos-once="true">
+        <ul>
+        <a href="about.html">About</a>
+        <a href="catalogue.html">Catalogue</a>
+        <a href="vaccine.html">Vaccine</a>
+        <a href="pharmacist.html">Pharmacist</a>
+        <a href="contact.html">Contact</a>
+        </ul>
+        
+        </nav>
+     
+      <h1 style="margin-top: 50px; font-size: 50px;  position: absolute;"
+          data-aos="fade-right" data-aos-duration="3500" data-aos-once="true">Vaccine order form</h1>
+        <div id="notice" data-aos="fade-right" data-aos-duration="3500" data-aos-once="true">
+            <h4>IMPORTANT NOTICE:</h4>
+           <h5>Have you been in contact with anyone with COVID-19?, if
+            so we ask that you do not attend the pharmacy and if you have
+            recently ordered a vaccine are you are about to we will hold that order
+            for you however, we here at chemist care would appreciate it if you got tested
+            before entering our stores and prior to coming contact your pharmacist and inform
+            them of your situation. If you are unsure, please take a COIVD test at the catalogue page.</h5>
+        </div>
+        
+        <div id="notice1" data-aos="fade-left" data-aos-duration="3500" data-aos-once="true">
+            <h4>OUR VACCINES:</h4>
+           <h5>Here at chemist care are currently offering 4 types of vaccines for our patients online
+           <ul>
+            <li>Flu (influenza) vaccine ($25)</li>
+            <li>Hepatitis A ($50)</li>
+            <li>Hepatitis B ($70)</li>
+            <li>Meningococcal vaccine ($220)</li>
+           </ul>
+           
+           </h5>
+        </div>
+        
+        
+     <div id="vForm" data-aos="fade-up" data-aos-duration="3500" data-aos-once="true">
+    <form id="Forms">
+        <h3 style="margin-left: 50px;">Name</h3><input type="text" name="fname">
+        <h3 style="margin-left: 50px;">Date of birth</h3><input type="date" name="dates" >
+        <h3 style="margin-left: 50px;">Address</h3><input type="text" name="address">
+        <h3 style="margin-left: 50px;">Type of vaccine</h3>
+        <select name="vaccine" style="width: 170px;">
+    <option value="IFZ">Flu</option>
+    <option value="HA">Hepatitis A</option>
+    <option value="HB">Hepatitis B</option>
+    <option value="MGCA">Meningococcal A</option>
+  </select>
+        <h3 style="margin-left: 50px;">Sex</h3>
+    <select name="sex">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+    </select>
+        <h3 style="margin-left: 50px;">Do you have allergies?</h3>
+    <select name="allergy">
+        <option value="No">No</option>
+        <option value="Yes">Yes</option>
+    </select>
+    <div id="print" onclick="myData()">Print</div>
+    </form>
+    </div>
+     
+     <table data-aos="fade-up" data-aos-duration="1000" data-aos-once="true" style="margin-bottom: 200px;
+     margin-left: 485px; width: 475px; margin-top: 50px; padding-top:  150px; padding-bottom: 50px;
+     border-radius: 50px; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);" id="otable">
+        <img src="images/logo.png" id="im1" style="margin-left: 550px; margin-top: 100px; position: absolute; "
+             data-aos="fade-down" data-aos-duration="500">
+    <tr>
+      <tr>
+    <th>Name:</th>
+    <td id="yname"></td>
+
+  </tr>
+      <tr>
+    <th>Date of birth:</th>
+    <td id="ydate"</td>
+  </tr>
+      <tr>
+    <th>Address:</th>
+    <td id="yaddress"></td>
+  </tr>
+      <tr>
+    <th>Type of vaccine:</th>
+    <td id="yvaccine"></td>
+  </tr>
+      <tr>
+    <th>Sex:</th>
+    <td id="ysex"></td>
+  </tr>
+      <tr>
+    <th>Allergies:</th>
+    <td id="yallergy"></td>
+  </tr>
+     </table>
+     
+<div id="pic1">
+    
+</div>
+
+<div id="Pdf" onclick="cPDF()">Download as PDF</div>
+
+<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-eb4af7c1-6507-40e6-8f0a-bda3a1340404"></div>
+
+  <script>
+      AOS.init({
+        duration: 3000,
+        once: true,
+      });
+      
+      List();
+    </script>
+    
+    
+<script>
+    
+function myName() {
+  var x = document.getElementById("Forms").elements.namedItem("fname").value;
+  document.getElementById("yname").innerHTML = x;
+}
+    
+function myBOD() {
+  var x = document.getElementById("Forms").elements.namedItem("dates").value;
+  document.getElementById("ydate").innerHTML = x;
+}
+    
+function myAddress() {
+  var x = document.getElementById("Forms").elements.namedItem("address").value;
+  document.getElementById("yaddress").innerHTML = x;
+}
+
+function myVaccine() {
+  var x = document.getElementById("Forms").elements.namedItem("vaccine").value;
+  document.getElementById("yvaccine").innerHTML = x;
+}
+
+function mySex() {
+  var x = document.getElementById("Forms").elements.namedItem("sex").value;
+  document.getElementById("ysex").innerHTML = x;
+}
+
+function myAllergies() {
+  var x = document.getElementById("Forms").elements.namedItem("allergy").value;
+  document.getElementById("yallergy").innerHTML = x;
+}
+
+function sdown(){
+    $('html, body').animate({scrollTop:1100}); //scrolls page at top when loaded
+}
+
+function myData(){
+    sdown();
+    myName();
+    myBOD();
+    myAddress();
+    myVaccine();
+    mySex();
+    myAllergies();
+}
+
+
+    function cPDF(){
+    var doc = new jsPDF()
+    var h1 = document.querySelector('#otable')
+    doc.fromHTML(h1,5,20)
+    doc.save("recepit.pdf")
+    }
+
+</script>  
+
+
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Contact | Chemist Care</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /><!--this is where the Animation on Scroll is linked from the internet-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script> <!--this is where the styles for the AOS is linked-->
+     <link rel="shortcut icon" type = image/png href="images/sclogo.png"> <!--adds logo to webpage tab-->
+    <script type= "text/javascript" src="js/script.js"></script><!--this is where the external javascript file is linked-->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="nbar"> <! this is the header div called nbar>
+<a href="index.html" data-aos="fade-right" data-aos-duration="3500" data-aos-once="true"><img src="images/logo.png"></a>
+    </div>
+     <nav data-aos="fade-right" data-aos-duration="3500" data-aos-once="true">
+        <ul>
+        <a href="about.html">About</a>
+        <a href="catalogue.html">Catalogue</a>
+        <a href="vaccine.html">Vaccine</a>
+        <a href="pharmacist.html">Pharmacist</a>
+        <a href="contact.html">Contact</a>
+        </ul>
+        </nav>
+     
+     <div id="T3" data-aos="fade-middle" data-aos-duration="3500" data-aos-once="true"><h2>Contact Us</h2></div>
+     <div id="textthree" data-aos="fade-middle" data-aos-duration="3500" data-aos-once="true">Do you need to contact a pharmacist
+     for help or an enquiry,
+     please fill in the form below and inform us of what you need help with, if your in
+     an emergency please call 000 first.</div>
+     
+  <form class="contact-form" name="contactForm" data-aos="fade-up" data-aos-duration="3500" data-aos-once="true"
+  action="mailto:chemistcare@gmail.com" method="post" enctype="text/plain" onsubmit="return validateForm()" >
+
+    <input type="text" class="contact-form-text" name="name" placeholder="Your name*">
+    <input type="email" name="email" class="contact-form-text" placeholder="Your email*">
+    <input type="text" name="phone" class="contact-form-text" placeholder="Your phone">
+    <textarea class="contact-form-text" name="comment" placeholder="Your message*"></textarea>
+    <button type="submit" value="Send" style="font-family: 'Montserrat', sans-serif;">Submit</button>
+  </form>
+</div>
+
+<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-eb4af7c1-6507-40e6-8f0a-bda3a1340404"></div>
+
+  <script>
+      AOS.init({
+        duration: 3000,
+        once: true,
+      });
+      
+      List();
+    </script>
+    
+    
+    <script>
+        
+    function validateForm() {
+        var x = document.forms["contactForm"]["name"].value;
+        if (x == "") {
+        alert("Your name must be filled out");
+        
+        var y = document.forms["contactForm"]["email"].value;
+        if (y == "") {
+            alert("Your email must be filled out");
+        }
+        
+        var z = document.forms["contactForm"]["comment"].value;
+        if ( z =="") {
+            alert("Your message must be filled out");
+        }
+        return false;
+  }
+}
+
+
+
+
+    </script>
+
+</body>
+</html>

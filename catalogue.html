@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Catalogue | Chemist Care</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /><!--this is where the Animation on Scroll is linked from the internet-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script> <!--this is where the styles for the AOS is linked-->
+     <link rel="shortcut icon" type = image/png href="images/sclogo.png"> <!--adds logo to webpage tab-->
+    <script type= "text/javascript" src="js/script.js"></script><!this is where the external javascript file is linked>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><!this sources the jquery from the internet>
+
+</head>
+
+<body>
+    <div id="nbar"> <! this is the header div called nbar>
+<a href="index.html" data-aos="fade-right" data-aos-duration="3500" data-aos-once="true"><img src="images/logo.png"></a>
+    </div>
+     <nav data-aos="fade-right" data-aos-duration="3500" data-aos-once="true">
+        <ul>
+        <a href="about.html">About</a>
+        <a href="catalogue.html">Catalogue</a>
+        <a href="vaccine.html">Vaccine</a>
+        <a href="pharmacist.html">Pharmacist</a>
+        <a href="contact.html">Contact</a>
+        </ul>
+        </nav>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="images/P1.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/P2.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/P3.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/P4.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/P5.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/P6.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/P7.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/P8.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/P9.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="images/P10.png" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span>
+  <span class="dot" onclick="currentSlide(4)"></span>
+  <span class="dot" onclick="currentSlide(5)"></span>
+  <span class="dot" onclick="currentSlide(6)"></span>
+  <span class="dot" onclick="currentSlide(7)"></span>
+  <span class="dot" onclick="currentSlide(8)"></span>
+  <span class="dot" onclick="currentSlide(9)"></span>
+  <span class="dot" onclick="currentSlide(10)"></span> 
+</div>
+
+<button id="buttons1" style="margin-right: 600px; margin-top: 50px; font-family: 'Montserrat', sans-serif;"
+        onclick="downloadPNG()">Download Catalogue</button>
+<div id="Form2">
+    <h3 style="margin-left: 35px;">Check if you can get a discount</h3>
+   <select name="tot_pin_requested" onchange="totalA(this.value);" style="margin-left: 50px;">
+        <option value="">Select Prodcut</option>
+        <option value="12.5">Panadol</option>
+        <option value="25">Face Mask</option>
+        <option value="20">Codral day and night</option>
+        <option value="22.5">Nuromol</option>
+        <option value="250">Dior addict</option>
+        <option value="75">Steam inhaler</option>
+        <option value="55">Nicabate</option>
+        <option value="30">Blackmores</option>
+        <option value="45">Voltaren</option>
+        <option value="20">QV lotion</option>
+    </select>
+   
+   <h3 style="margin-left: 35px;">Do you have a concession?</h3>
+   <select style="margin-left: 55px;" onchange="totalB(this.value);">
+    <option value="">Select option</option>
+    <option value="1">No</option>
+    <option  value="0.8">Yes</option>
+   </select>
+   
+   <h3 style="margin-left: 35px;">Your cost will be</h3>
+      <input class="w3-input w3-border" name="showTB" id="showTB" type="text" readonly>
+</div>
+
+<div id="Cvdtest">
+<h3 style="margin-left: 35px;">Do you feel unwell and want to buy something from Chemist Care?</h3>
+<h3 style="margin-left: 35px; font-size: 20px">Please take our COVID-19 test to ensure it is safe for you to attend the pharmacy</h3>
+<a id="button2" style="background-color: white; color: #101535; font-family: 'Montserrat', sans-serif;
+font-size: 25px; margin-right: 175px; margin-top: 100px;" href="covidtest.html">COVID-19 Test</button>
+</a>
+</div>
+
+<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-eb4af7c1-6507-40e6-8f0a-bda3a1340404"></div>
+
+
+  <script>
+      AOS.init({
+        duration: 3000,
+        once: true,
+      });
+      
+      List();
+    </script>
+    
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+    function plusSlides(n) {
+          showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}    
+        if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    }
+    ______________________________________________________
+
+    function downloadPNG(){
+        window.open('images/C1.png', 'Download');
+    }
+    
+/*___________________________________________________________*/
+        var numA = 0;
+    function totalA(valA) {
+    if (valA) {
+		numA = Number(valA);
+    }
+    var tots =  numB*numA;
+    document.getElementById("showTB").value = "$" + tots.toFixed(2);
+    }
+    
+    var numB = 0;
+    function totalB(valB) {
+    if (valB) {
+		numB = Number(valB);
+    }
+    var tots =  numB*numA;
+    document.getElementById("showTB").value = "$" + tots.toFixed(2);
+    }
+
+    
+    </script>
+
+</body>
+</html>

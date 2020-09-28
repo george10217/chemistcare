@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>COVID-19 | Chemist Care</title>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /><!--this is where the Animation on Scroll is linked from the internet-->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script> <!--this is where the styles for the AOS is linked-->
+     <link rel="shortcut icon" type = image/png href="images/sclogo.png"> <!--adds logo to webpage tab-->
+    <script type= "text/javascript" src="js/script.js"></script><!this is where the external javascript file is linked>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><!this sources the jquery from the internet>
+
+
+</head>
+
+<style>
+	input{
+		height: 25px;
+		width: 25px;
+	}
+</style>
+
+<body>
+    <div id="nbar"> <! this is the header div called nbar>
+<a href="index.html" data-aos="fade-right" data-aos-duration="3500" data-aos-once="true"><img src="images/logo.png"></a>
+    </div>
+     <nav data-aos="fade-right" data-aos-duration="3500" data-aos-once="true">
+        <ul>
+        <a href="about.html">About</a>
+        <a href="catalogue.html">Catalogue</a>
+        <a href="vaccine.html">Vaccine</a>
+        <a href="pharmacist.html">Pharmacist</a>
+        <a href="contact.html">Contact</a>
+        </ul>
+        </nav>
+     <h1 style="margin-top: 40px; font-size: 60px; margin-left: 500px;">COVID-19 Test</h1>
+
+<div id="content">
+            <div class="wrapper"></div>
+            <div id= "container"></div>
+                <div class="quizContainer">
+                    <h2>Please select your response to the symptom stated</h2>
+                    <div class="question"></div>
+                    <ul class="choiceList"></ul>
+                    <div class="qMessage"></div>
+                    <div class="result"></div>
+                    <div class="nextButton">Next Question</div>
+                    <br>
+                </div>
+            </div>
+
+<script src="https://apps.elfsight.com/p/platform.js" defer></script>
+<div class="elfsight-app-eb4af7c1-6507-40e6-8f0a-bda3a1340404"></div>
+
+  <script>
+      AOS.init({
+        duration: 3000,
+        once: true,
+      });
+      
+      List();
+    </script>
+    
+    <script>
+        var questions = [{
+	question: "Are you coughing?",
+	choices: ["Yes", "No"],
+	correctAnswer: 0
+}, {
+	question: "Is your temperature above 37 degrees (C)?",
+	choices: ["Yes", "No"],
+	correctAnswer: 0
+}, {
+	question: "Do you have a runny nose?",
+	choices: ["Yes", "No"],
+	correctAnswer: 0
+}, {
+	question: "Are you able to smell?",
+	choices: ["Yes", "No"], 
+	correctAnswer: 1
+}, {
+	question: "Do have stomach pain?",
+	choices: ["Yes", "No"],
+	correctAnswer: 0
+}, {
+	question: "Do you have a sore throat?",
+	choices: ["Yes", "No"],
+	correctAnswer: 0	
+}, {
+	question: "Do you have a headache?",
+	choices: ["Yes", "No"],
+	correctAnswer: 0	
+},
+{
+	question: "Do you have difficulty breathing or shortness of breath?",
+	choices: ["Yes", "No"],
+	correctAnswer: 0	
+},
+{
+	question: "Do you have chest pain or pressure?",
+	choices: ["Yes", "No"],
+	correctAnswer: 0	
+},
+{
+	question: "How bad is your pain?",
+	choices: ["Very Bad", "Bad", "Okay", "No pain"],
+	correctAnswer: 0	
+}
+];
+
+var currentQuestion = 0;
+var correctAnswers = 0;
+var quizOver = false;
+
+$(document).ready(function(){
+	displayCurrentQuestion();
+	$(this).find(".qMessage").hide();
+	$(this).find(".nextButton").on("click",function(){
+		if(!quizOver){
+			value=$("input[type='radio']:checked").val();
+			if (value==undefined){
+				$(document).find("qMessage").text("Please select an answer");
+				$(document).find("qMessage").show();
+			} else {
+				$(document).find("qMessage").hide();
+				if (value==questions[currentQuestion].correctAnswer){
+					correctAnswers++;
+				}
+				currentQuestion++;
+				if(currentQuestion<questions.length){
+					displayCurrentQuestion();
+				}else{
+					displayScore();
+					$(document).find(".nextButton").text("Test again");
+					quizOver=true;
+				}
+			}
+		}else{
+			quizOver=false;
+			$(document).find(".nextButton").text("Next Question");
+			resetQuiz();
+			displayCurrentQuestion();
+			hideScore();
+		}
+	});
+});
+	
+function displayCurrentQuestion(){
+	console.log("In display current Question");
+
+	var question = questions[currentQuestion].question;
+	var questionClass = $(document).find(".quizContainer > .question");
+	var choiceList = $(document).find(".quizContainer > .choiceList");
+	var numChoices = questions[currentQuestion].choices.length;
+
+	//set the questionClass text to the current question.
+	$(questionClass).text(question);
+	//Remove all current <li> elements (if any).
+	$(choiceList).find("li").remove();
+
+	var choice;
+	for (i=0; i < numChoices; i++){
+		choice = questions[currentQuestion].choices[i];
+		$('<li><input type= "radio" value=' + i + ' name="dynradio" />' + choice + '<li>').appendTo(choiceList);
+	}
+}
+
+function resetQuiz(){
+	currentQuestion = 0;
+	correctAnswers = 0;
+	hideScore();
+}	
+
+function displayScore(){
+	$(document).find(".quizContainer > .result").text("You are showing: " + correctAnswers + " out of: " + questions.length + " COVID-19 symptoms."
+                                                      + " If you have scored above 5 symptoms we ask that you get tested before coming to the store."
+                                                      + " If you have scored more than 7 please call 000 immediately."
+                                                      + " Otherwise please wear a mask on arrival.");
+	$(document).find(".quizContainer > .result").show();
+	
+}
+
+	
+function hideScore(){
+	$(document).find(".result").hide();
+}
+    </script>
+
+</body>
+</html>

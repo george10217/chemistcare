@@ -113,7 +113,7 @@ margin-right: -1000px; margin-top: -55px; font-family: 'Montserrat', sans-serif;
     <h3 style="margin-left: 50px;">Book your time to see a pharmacist</h3><br>
     <form id="Forms" name="Forms">
         <h3 style="margin-left: 25px;">Name:</h3>
-    <input class="pharmacist-contact" type="text" style="width: 300px;" placeholder="Name"><br>
+    <input class="pharmacist-contact" type="text" style="width: 300px;" placeholder="Name" name="Names"><br>
     <h3 style="margin-left: 25px;">Pharmacist:</h3>
 
   <h5 style="margin-left: 45px;">Mr John Sams</h5>  <input type="radio" id="rbutton"  value="Mr John Sams" name="pharmacist" onclick="setTime();" onchange="getOptions(this.value);">
@@ -244,27 +244,28 @@ function getOptions(pharmacist) {
     if (pharmacist == "Mr John Sams") {
         list = ["Please Select", "8AM-10AM (Monday)","8AM-10AM (Thursday)","10AM-11AM (Tuesday)","7AM-11AM (Wednesday)","9AM-10AM (Friday)", "10AM-11AM (Saturday)", "9AM-10AM (Sunday)",
                 "4PM-6PM (Monday)", "4PM-5PM (Tuesday)", "2PM-3PM (Wednesday)", "2PM-6PM (Thursday)", "1PM-4PM (Friday)", "5PM-6PM (Saturday)", "12PM-6PM (Sunday)"];  // Creates an array called list populating it with pizza type
-        listValue = [' ',7.95,9.95,8.95];  // Creates an array called listValue populating it with pizza prices
+      
     }
     if (pharmacist == "Dr Simon Wright") {
         list = ["Please Select","10AM-11AM (Monday)","11AM-12PM (Tuesday)","9AM-11AM (Wednesday)","8AM-10AM (Thursday)","9AM-10AM (Friday)","8AM-11AM (Saturday)","9AM-11AM (Sunday)",
                 "2PM-6PM (Monday)", "1PM-5PM (Tuesday)", "1PM-3PM (Wednesday)", "2PM-6PM (Thursday)", "3PM-4PM (Friday)", "2PM-6PM (Saturday)", "2PM-6PM (Sunday)"];
-        listValue = [' ', 10.95, 9.95, 10.95];
+   
     }
     
     for (var i = 0; i < document.Forms.pharmacist.length; i++) {         //Clear the dropdown menu of old dropdown list
 		document.Forms.Time.options[i] = null;
 	}
 	for (var i = 0; i < list.length; i++) {                                     //Re-populates the dropdown menu with new dropdown list
-		document.Forms.Time.options[i] = new Option(list[i],listValue[i],0,0);
+		document.Forms.Time.options[i] = new Option(list[i]);
 		//alert(list[i]);
 	}
     
 
+
 }
 
-function Submitphar(list,pharmacist){
-    alert("Your pharmacist will be:" + pharmacist + "You will see him at:" + list)
+function Submitphar(pharmacist,list){
+    alert("Thank you:  " + document.Forms.Names.value + "    " + "Your pharmacist will be: " + document.Forms.pharmacist.value + "  " + "You will see him at: " + document.Forms.Time.value)
 }
 
 function randomnumb() {
